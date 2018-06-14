@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+\Illuminate\Support\Facades\Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+\Illuminate\Support\Facades\Auth::routes();
+\Illuminate\Support\Facades\Route::get('/home', 'HomeController@index')->name('home');
+\Illuminate\Support\Facades\Route::get('/test', 'TestController@index')->name('test');
